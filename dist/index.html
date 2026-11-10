@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/estilos.css">
     <link rel="shortcut icon" href="./public/img/favico.png" type="image/x-icon">
     <title>Examen Unidad 4</title>
 </head>
@@ -13,7 +14,31 @@
                 <h1 class="text-danger">Plantilla Examen Unidad 4</h1>
             </div>
         </div>
-    </div>    
+    </div>
+    <main class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-9 col-xl-8">
+                <header class="text-center mb-4">
+                    <h1 class="display-5 fw-bold mt-2">Expresiones regulares</h1>
+                </header>
+                <section class="matcher-card">
+                    <form id="regex-form" novalidate>
+                        <label for="regex-input">Expresión regular</label>
+                        <input id="regex-input" type="text" placeholder="Ejemplo: ^[a-z]+$" autocomplete="off" spellcheck="false" required>
+
+                        <label for="text-input">Texto para comprobar</label>
+                        <textarea id="text-input" rows="6" placeholder="Escribe o pega aquí el texto..." required></textarea>
+
+                        <div class="button-row">
+                            <button type="submit">Comparar</button>
+                            <button type="reset" id="clear-button">Limpiar</button>
+                        </div>
+                    </form>
+                    <div id="result" class="alert d-none" role="status" aria-live="polite"></div>
+                </section>
+            </div>
+        </div>
+    </main>
     <script src="./bundle.js"></script>
 </body>
 </html>
